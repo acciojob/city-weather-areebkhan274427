@@ -32,12 +32,12 @@ const App = () => {
   return (
     <div>
       {/* Do not remove the main div */}
-      <input
+      <input className="search"
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleEnter}
       />
       {weatherData ? (
-        <div>
+        <div className="weather">
           <h1>{weatherData.name}</h1>
           <h2>{weatherData.temp}</h2>
           <p>{weatherData.weather}</p>
