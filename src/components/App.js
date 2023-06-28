@@ -25,6 +25,7 @@ const App = () => {
           weather: data.weather[0].main,
         };
         console.log("Object", obj);
+        setSearch('')
         setWeatherData(obj);
       });
   }
@@ -35,6 +36,7 @@ const App = () => {
       <input className="search"
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={handleEnter}
+        value={search}
       />
       {weatherData ? (
         <div className="weather">
